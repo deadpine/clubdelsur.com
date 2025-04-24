@@ -19,22 +19,6 @@
 			background: url(rocas.jpg) #31302F 100% / cover no-repeat;
     }
 
-		div {
-			position: absolute;
-			top: 5rem;
-			margin: auto;
-
-			display: flex;
-			padding: 4rem 6rem;
-			flex-direction: column;
-			align-items: center;
-			gap: 1.5rem;
-
-			border-radius: 3px;
-			max-height: calc(100vh - 8rem);
-			overflow: hidden;
-		}
-
 		.clip {
 			position: absolute;
 			top: 2rem;
@@ -42,22 +26,35 @@
 			z-index: 100;
 		}
 
-		.paper-dark {
-			max-width: 34rem;
-			height: 480px;
-			transform: rotate(2deg);
+		.paper {
+			position: absolute;
+			top: 5rem;
+			margin: auto;
+			display: flex;
+			padding: 4rem 6rem;
+			flex-direction: column;
+			align-items: center;
+			gap: 1.5rem;
+			border-radius: 3px;
+			max-height: calc(100vh - 8rem);
+			overflow: scroll;
+		}
 
+		.paper.dark {
+			max-width: 34rem;
+			height: 400px;
+			transform: rotate(2deg);
 			border: 1px solid #AA7A4C;
 			background: 
-				linear-gradient(158deg, rgba(192, 154, 119, 0.10) 19.26%, rgba(167, 121, 79, 0.00) 95.31%), 
+				linear-gradient(158deg, rgba(192, 154, 119, 0.10) 19.26%, rgba(167, 121, 79, 0.00) 95%), 
 				/* url(<path-to-image>) lightgray 50% / cover no-repeat,  */
-				linear-gradient(152deg, #8B5223 17.52%, #894F25 92.31%);
-			background-blend-mode: lighten, screen, normal;
+				linear-gradient(152deg, #8B5223 17%, #894F25 92%);
+			background-blend-mode: lighten, normal;
 			box-shadow: 0px 4px 8px 0px rgba(77, 45, 29, 0.30);
 			filter: blur(0.6px);
 		}
 
-    .paper-cream {
+    .paper.cream {
       display: flex;
 			max-width: 30rem;
 			transform: rotate(-1.5deg);	
@@ -65,14 +62,13 @@
       border: 1px solid rgba(229, 227, 219, 0.10);
       background: 
         linear-gradient(160deg, rgba(253, 253, 252, 0.00) 5%, rgba(32, 32, 30, 0.02) 96%), 
-        /* url(<path-to-image>) lightgray 0% 0% / 16.71111136674881px 16.71111136674881px repeat,  */
         rgba(246, 242, 234, 0.95);
-      background-blend-mode: normal, multiply, normal;
+      background-blend-mode: normal, normal;
       box-shadow: 
         0px 0px 2px 0px rgba(67, 67, 56, 0.30), 
         0px 8px 28px 0px rgba(67, 67, 56, 0.20);
     }
-		.paper-cream img {
+		.paper.cream img {
 			margin: 2rem 0;
 		}
 
@@ -83,39 +79,36 @@
       font-size: 1.1rem;
       line-height: 1.5; /* 156.25% */
     }
+
+
   </style>
 </head>
 <body>
 
-	<!-- <div class="papers"> -->
+	<img src="clip.svg" alt="paper clip" class="clip"/>
 
-		<img src="clip.svg" alt="paper clip" class="clip"/>
+	<div class="paper dark">
+		<p>
+			Club del Sur es un nuevo club social y cultural para la comunidad permanente de José Ignacio y alrededores. 
+			Somos un grupo de vecinos que propone actividades de participación activa en la vida cultural. 
+			En 2024 hicimos un club de lectura, un espacio de cowork y pensamos una revista. 
+			Tenemos muchas ideas más, y ganas de ejecutarlas en 2025. 
+			La tranquilidad de vivir rodeados de naturaleza necesita el contrapunto de una vida intelectual más activa, y queremos construirla juntos.
+		</p>
+	</div>
 
-		<div class="paper-dark">
-			<p>
-				Club del Sur es un nuevo club social y cultural para la comunidad permanente de José Ignacio y alrededores. 
-				Somos un grupo de vecinos que propone actividades de participación activa en la vida cultural. 
-				En 2024 hicimos un club de lectura, un espacio de cowork y pensamos una revista. 
-				Tenemos muchas ideas más, y ganas de ejecutarlas en 2025. 
-				La tranquilidad de vivir rodeados de naturaleza necesita el contrapunto de una vida intelectual más activa, y queremos construirla juntos.
-			</p>
-		</div>
-
-		<div class="paper-cream">
-			<img src="logo.svg" alt="club del sur logo" />
-			<p>
-				Club del Sur es un nuevo club social y cultural para la comunidad permanente de José Ignacio y alrededores. 
-				Somos un grupo de vecinos que propone actividades de participación activa en la vida cultural. 
-				<br/>
-				En 2024 hicimos un club de lectura, un espacio de cowork y pensamos una revista. 
-				Tenemos muchas ideas más, y ganas de ejecutarlas en 2025. 
-				La tranquilidad de vivir rodeados de naturaleza necesita el contrapunto de una vida intelectual más activa, y queremos construirla juntos.
-			</p>
-			<p>Escribinos a: <a>lectores@clubdelsur.com</a></p>
-		</div>
-
-	<!-- </div> -->
-	
+	<div class="paper cream">
+		<img src="logo.svg" alt="club del sur logo" />
+		<p>
+			Club del Sur es un nuevo club social y cultural para la comunidad permanente de José Ignacio y alrededores. 
+			Somos un grupo de vecinos que propone actividades de participación activa en la vida cultural. 
+			<br/>
+			En 2024 hicimos un club de lectura, un espacio de cowork y pensamos una revista. 
+			Tenemos muchas ideas más, y ganas de ejecutarlas en 2025. 
+			La tranquilidad de vivir rodeados de naturaleza necesita el contrapunto de una vida intelectual más activa, y queremos construirla juntos.
+		</p>
+		<p>Escribinos a: <a>lectores@clubdelsur.com</a></p>
+	</div>
   
 </body>
 </html>
