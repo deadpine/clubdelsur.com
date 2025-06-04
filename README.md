@@ -1,2 +1,2 @@
 # clubdelsur.com
-Club del sur website
+Club del Sur ✦ Website
